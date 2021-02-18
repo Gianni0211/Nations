@@ -49,8 +49,7 @@ public class CityController {
 	}
 
 	@GetMapping("/updatecity/{id}/{name}/{region}/{population}/{code}")
-	// Cosa brutta, ma non so come fare a passare l'oggetto city dalla jsp, chiedere
-	// a Ivan
+	
 	public String updateForm(@PathVariable("id") long id, @PathVariable("name") String name,
 			@PathVariable("region") String region, @PathVariable("population") long population,
 			@PathVariable("code") String code, ModelMap map) {
@@ -74,7 +73,7 @@ public class CityController {
 
 
 	@PostMapping("/updatecity")
-	//Non so come prendere tutti questi param dal form senza doverli inserire tutti come requestparam
+	
 	public String updateCity(@RequestParam("name") String name, @RequestParam("country") String code,
 			@RequestParam("population") long population, @RequestParam("region") String region,
 			@RequestParam("id") String id, ModelMap map) {
